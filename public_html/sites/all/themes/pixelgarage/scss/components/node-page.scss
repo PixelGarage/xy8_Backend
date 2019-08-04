@@ -1,0 +1,48 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General setting
+// -------------------------
+.node-page {
+  @include pxl-spacey(mt, s1, section);
+
+  >.row {
+    >.col-sm-12 {
+      margin: 0;
+
+      >.paragraphs-items {
+        >.field-name-field-paragraphs {
+          >.field-items {
+            >.field-item {
+
+              .entity-paragraphs-item {
+                @include pxl-spacey(mb, s1, section);
+
+                &.full-width {
+                  @include pxl-spacey(py, s1, section);
+                  @include theme-lightgray-black;
+                }
+              }
+              &:last-child .entity-paragraphs-item {
+                margin-bottom: 0 !important;
+              }
+
+              // see specific paragraph-items for further rules
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

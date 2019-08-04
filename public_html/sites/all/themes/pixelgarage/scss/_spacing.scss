@@ -1,0 +1,149 @@
+/*
+ * Pixelgarage vertical spacing
+ *
+ * The vertical spacing for the grid and all HTML blocks
+ * --------------------------------------------------*/
+//
+//  Container
+//
+.container, .container-fluid {
+  @include pxl-space0(my);
+  @include pxl-space0(py);
+}
+
+//
+// Header, Footer
+//
+header {
+  @include pxl-spacey(pt, s1, default);
+}
+
+footer {
+  @include pxl-spacey(pt, s1, default);
+}
+
+
+//
+// Top-level blocks: Main, Article, ASide, Section
+//
+// Main can contain articles and sections, but not vice-versa
+// Articles and Aside can contain sections but not vice-versa
+// Main, article, section and aside can be structured with a grid (row > col)
+//
+main, article, section, aside {
+  position: relative;
+  width: 100%;
+
+  padding-left: 0;
+  padding-right: 0;
+  @include pxl-space0(my);
+}
+
+//
+// Drupal: blocks are sections
+section:not(.block) {
+  @include pxl-spacey(py, s1, section);
+}
+
+
+//
+// Detail block
+//
+details {
+  summary {
+
+  }
+}
+
+//
+// Dialog block
+//
+dialog {
+}
+
+
+//
+// GRID
+//
+// Rows
+//
+.row {
+  @include pxl-space0(my);
+  @include pxl-space0(py);
+}
+
+//
+// Columns
+//
+.col {
+  @include pxl-spacey(py, s1, column);
+}
+
+//
+// ONLY Columns and sections can contain text elements, form contains form elements
+// nullify last bottom margin in forms, but not for text
+.col > *:first-child,
+section:not(#block-system-main) > *:first-child,
+form > *:first-child {
+  margin-top: 0;
+}
+form > *:last-child {
+  margin-bottom: 0;
+}
+
+
+//
+// Text blocks (blocks between text, e.g. paragraphs)
+//
+// images and embeds
+h1+img, .pxl-title+img,
+h2+img, .pxl-subtitle+img,
+p+img, .pxl-text+img,
+small+img, .marginal+img, .pxl-subtext+img, .legend+img,
+blockquote+img, .pxl-quote+img {
+  @include pxl-spacey(my, s1, section);
+}
+
+// forms
+p+form {
+  margin: 2rem 0;
+  @include pxl-space0(p);
+}
+
+//
+// Unordered lists
+p+ul, p+.unordered-list {
+  margin: 2rem 0;
+  @include pxl-space0(p);
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+//
+// ordered lists
+p+ol, p+.ordered-list {
+  margin: 2rem 0;
+  @include pxl-space0(p);
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+//
+// tables
+p+table {
+  margin: 2rem 0;
+  @include pxl-space0(p);
+
+  tr {
+    th {
+      padding: 0.5em;
+    }
+    td {
+      padding: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+/*
+ * Pixelgarage styling
+ *
+ * Custom Styling can use bootstrap functions, mixins and all utility classes.
+ * The elements are normalized with bootstrap but not styled at all.
+ *
+ * This SCSS framework is an extension of the bootstrap framework in the following points:
+ *
+ *  1) Container x-padding can be set for all breakpoints (has not to be equal to grid-gutter-width
+ *
+ *  2) Grid system with breakpoint dependant grid-gutter-widths (see $grid-gutter-widths in _variables.scss)
+ *
+ *  3) All spaces (padding, margin) are based on the $grid-gutter-widths!
+ *
+ * -----------------------------------------------------------------------------*/
+
+//
+// Define bootstrap library path
+$bs-path: '../../../../../libraries/bootstrap';
+
+/* import mixins and functions and fonts */
+@import "custom";
+@import "fonts";
+
+/* import bootstrap utility rules */
+@import "../../../../../libraries/bootstrap/scss/utilities";
+
+/* normalize HTML elements (bootstrap) */
+@import '../../../../../libraries/bootstrap/scss/reboot';
+
+/* Specific bootstrap rules */
+@import '../../../../../libraries/bootstrap/scss/alert';
+@import "../../../../../libraries/bootstrap/scss/transitions";
+@import "../../../../../libraries/bootstrap/scss/nav";
+@import "../../../../../libraries/bootstrap/scss/navbar";
+@import "../../../../../libraries/bootstrap/scss/images";
+@import "../../../../../libraries/bootstrap/scss/modal";
+
+
+/* import specific Pixelgarage rules */
+@import "grid";
+@import "spacing";
+@import "utilities";
+@import "typography";
+@import "themes";
+
+/* import Drupal specific components */
+@import "components";
+
+//
+//  Pixelgarage CSS rules
+//
+/* Html */
+html {
+  height: 100%;
+  font-size: $global-font-size;
+}
+
+/* Body */
+body {
+  position: relative;
+  min-height: 100%;
+  // font smoothing
+  @include pxl-sharp-fonts;
+
+	//Trennung Manuell mit &shy;
+  @include pxl-hyphenate(manual);
+
+  // text font
+  @include pxl-font-plain-style();
+
+  *:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+//
+// Images
+//
+img {
+ @include img-fluid;
+}

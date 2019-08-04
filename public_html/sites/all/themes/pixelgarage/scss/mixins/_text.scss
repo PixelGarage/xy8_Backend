@@ -1,0 +1,416 @@
+/*
+ * Typography mixins
+ */
+// Import fixed or responsive font
+//@import "text-resp";
+@import "text-fix";
+
+
+// Variables
+// -------------------------
+$pxl-color-glow: #40856D;
+
+
+//
+//  TEXT optimisation
+//
+// Language dependant word hyphenation (language has to be set in html element)
+@mixin pxl-hyphenate($mode: auto){
+  // Non standard for webkit, breaks between words
+  word-break: break-word;
+
+  // uses dictionaries for correct word breaking in supported languages
+  -webkit-hyphens: $mode;
+  -moz-hyphens: $mode;
+  -ms-hyphens: $mode;
+  hyphens: $mode;
+}
+
+//
+// Sharper font smoothing for modern browsers
+@mixin pxl-sharp-fonts(){
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+
+  // Subpixel Rendering -> https://www.mobomo.com/2014/05/better-font-smoothing-in-chrome-on-mac-os-x
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and ( min-device-pixel-ratio: 1.25),
+  only screen and ( min-resolution: 200dpi),
+  only screen and ( min-resolution: 1.25dppx) {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+//
+// CSS3 Glow Animation
+//
+@mixin pxl-keyframes-text-glow($color: $pxl-color-glow) {
+  @-webkit-keyframes text-glow {
+    from { text-shadow: 0 0 8px $color, 0 0 8px $color, 0 0 8px $color, 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 18px $color, 0 0 22px $color;  }
+    to   { text-shadow: 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 32px $color;  }
+  }
+  @-moz-keyframes text-glow {
+    from { text-shadow: 0 0 8px $color, 0 0 8px $color, 0 0 8px $color, 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 18px $color, 0 0 22px $color;  }
+    to   { text-shadow: 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 32px $color;  }
+  }
+  @keyframes text-glow {
+    from { text-shadow: 0 0 8px $color, 0 0 8px $color, 0 0 8px $color, 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 18px $color, 0 0 22px $color;  }
+    to   { text-shadow: 0 0 12px $color, 0 0 12px $color, 0 0 12px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 24px $color, 0 0 32px $color;  }
+  }
+}
+
+
+//
+// Define specific styles for clarity
+//
+@mixin pxl-title(){
+  @include pxl-font-style(title);
+}
+
+@mixin pxl-subtitle(){
+  @include pxl-font-style(subtitle);
+}
+
+@mixin pxl-text(){
+  @include pxl-font-style(text);
+}
+
+@mixin pxl-subtext(){
+  @include pxl-font-style(subtext);
+}
+
+@mixin pxl-legendtext(){
+  @include pxl-font-style(legend);
+}
+
+@mixin pxl-formtext(){
+  @include pxl-font-style(form);
+}
+
+@mixin pxl-quote(){
+  @include pxl-font-style(text);
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+}
+
+@mixin pxl-menutext(){
+  @include pxl-font-style(text);
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Big first letter
+@mixin pxl-paragraph-first-letter(){
+  p::first-letter {
+    @include pxl-font-style(title);
+    float: left;
+    vertical-align: top;
+  }
+}
+
+// Glow title
+@mixin pxl-glow(){
+  @include pxl-font-style(title);
+  @include pxl-animation(text-glow 3s ease-in-out infinite alternate);
+  @include pxl-keyframes-text-glow();
+  text-shadow: 0 0 10px $pxl-color-glow, 0 0 10px $pxl-color-glow, 0 0 10px $pxl-color-glow, 0 0 20px $pxl-color-glow, 0 0 20px $pxl-color-glow, 0 0 20px $pxl-color-glow, 0 0 20px $pxl-color-glow, 0 0 30px $pxl-color-glow;
+}
+
+
+//
+// Typography of HTML elements
+//
+@mixin pxl-html-element-typo () {
+  //
+  // Headers
+  h1, .pxl-title {
+    @include pxl-title();
+  }
+
+  h2, .pxl-subtitle {
+    @include pxl-subtitle();
+  }
+
+  h3, h4, h5, h6 {
+    @include pxl-font-plain-style();
+    font-weight: bold;
+  }
+
+  //
+  // paragraphs, form, blockquote and small text
+  p, .pxl-text {
+    @include pxl-text();
+  }
+
+  form, .form {
+    @include pxl-formtext();
+  }
+
+  blockquote, .pxl-quote {
+    @include pxl-quote();
+  }
+
+  small, .marginal, .pxl-subtext {
+    @include pxl-subtext();
+  }
+
+  .legend {
+    @include pxl-legendtext();
+  }
+
+  //
+  // headlines
+  h1.headline, h2.headline, p.headline, .pxl-title.headline, .pxl-subtitle.headline, .pxl-text.headline {
+    display: flex;
+    flex-wrap: wrap;
+
+    span.headline-inner {
+      font-weight: bold;
+    }
+  }
+  h1.headline, .pxl-title.headline {
+    @include pxl-headline-style(h1);
+  }
+  h2.headline, .pxl-subtitle.headline {
+    @include pxl-headline-style(h2);
+  }
+  p.headline, .pxl-text.headline {
+    @include pxl-headline-style(p);
+  }
+
+  // lead text in paragraphs
+  p.pxl-leadtext {
+    margin-bottom: $line-height;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  //
+  // Additive rule: place below rules, that can be changed by this rule (specificity)
+  .intermediate-title {
+    font-weight: bold;
+    margin-bottom: 0;
+
+    // set margin of immediately following element
+    &+h1, &+.pxl-title,
+    &+h2, &+.pxl-subtitle,
+    &+p, &+.pxl-text {
+      margin-top: 0;
+    }
+  }
+
+
+  //
+  // links
+  a, .link {
+    @include pxl-link();
+  }
+  .link-underline-off {
+    @include pxl-link-underline-off;
+  }
+  .link-underline-on {
+    @include pxl-link-underline-on;
+  }
+
+  // links in titles and paragraphs
+  h1, h2, .pxl-title, .pxl-subtitle {
+    a, .link {
+      @include pxl-link-underline-on($line-height: 2px, $line-dist: -4px);
+    }
+  }
+  p, .pxl-text {
+    a, .link {
+      @include pxl-link-underline-on;
+    }
+  }
+
+
+  //
+  // Unordered lists
+  p+ul, p+.unordered-list {
+    list-style-type: none;
+
+    li {
+      position: relative;
+      margin-left: 1.25em;
+
+      &::before {
+        content: "\FE63"; /*em-dash*/
+        position: absolute;
+        left: -1.25em;
+      }
+    }
+  }
+
+  //
+  // ordered lists
+  p+ol, p+.ordered-list {
+    list-style-type: decimal;
+    padding-left: 25px;
+
+    li {
+      padding-left: 10px;
+    }
+  }
+
+  //
+  // tables
+  table {
+    @include pxl-subtext();
+
+    tr {
+      th {
+        font-weight: bold;
+      }
+      td {
+        font-weight: normal;
+      }
+    }
+  }
+
+
+  //
+  // text formatting
+  //
+  .numbers {
+    font-family: $pxl-font;
+    font-weight: normal;
+    font-style: normal;
+    font-variant-numeric: lining-nums tabular-nums;
+    letter-spacing: 0.04em;
+  }
+
+  i, em, .italic {
+    font-family: $pxl-font;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0;
+  }
+
+  strong, b, .bold {
+    font-family: $pxl-font;
+    font-weight: bold;
+    font-style: normal;
+  }
+  .bold-gold {
+    font-family: $pxl-font;
+    font-weight: bold;
+    font-style: normal;
+    color: $pxl-gold;
+  }
+
+  u {
+    font-family: $pxl-font;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  mark {
+    font-family: $pxl-font;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #ff0;
+  }
+
+  pre, code, kbd, samp {
+    font-family: $font-family-monospace;
+    font-weight: normal;
+    font-style: normal;
+    color: $text-color-code;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 2px solid $pxl-color-border-active;
+    background: none;
+  }
+
+}
+
+@mixin pxl-wysiwyg-body() {
+  @include pxl-html-element-typo();
+}
+
+
+@mixin pxl-html-element-maxwidth() {
+  //
+  // set global max-width for all styled elements
+  h1, .pxl-title,
+  h2, .pxl-subtitle,
+  p, .pxl-text, p.headline, .pxl-text.headline,
+  small, .marginal, .pxl-subtext, .legend,
+  blockquote, .pxl-quote {
+    max-width: 100%;
+  }
+
+  //
+  // set specific element max-width for large column widths (11, 12)
+  .col-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xl-11,
+  .col-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xl-12
+  {
+    h1, .pxl-title,
+    h2, .pxl-subtitle,
+    p, .pxl-text,
+    blockquote, .pxl-quote {
+      @include media-breakpoint-up(lg) {
+        max-width: 90%;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: 80%;
+      }
+    }
+    p.headline, .pxl-text.headline {
+      @include media-breakpoint-up(xs) {
+        max-width: 80%;
+      }
+      @include media-breakpoint-up(xs-phone) {
+        max-width: 70%;
+      }
+      @include media-breakpoint-up(sm) {
+        max-width: 60%;
+      }
+      @include media-breakpoint-up(md) {
+        max-width: 50%;
+      }
+    }
+    small, .marginal, .pxl-subtext, .legend {
+      @include media-breakpoint-up(xs-phone) {
+        max-width: 90%;
+      }
+      @include media-breakpoint-up(md) {
+        max-width: 80%;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: 70%;
+      }
+    }
+  }
+
+  //
+  // Override max-width, when column is not full-width (11,12).
+  // Assumes, that column-width on larger screen-size is reduced and not enlarged
+  // e.g. col-12 -> col-md-6 -> col-lg-4
+  .col-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xl-1,
+  .col-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xl-2,
+  .col-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xl-3,
+  .col-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xl-4,
+  .col-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xl-5,
+  .col-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xl-6,
+  .col-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xl-7,
+  .col-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xl-8,
+  .col-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xl-9,
+  .col-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xl-10
+  {
+    h1, .pxl-title,
+    h2, .pxl-subtitle,
+    p, .pxl-text, p.headline, .pxl-text.headline,
+    small, .marginal, .pxl-subtext, .legend,
+    blockquote, .pxl-quote {
+      max-width: 100%;
+    }
+  }
+
+}

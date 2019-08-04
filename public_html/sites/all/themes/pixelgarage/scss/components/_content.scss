@@ -1,0 +1,109 @@
+/*
+ *  Main content component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+// Footer
+// -------------------------
+$pxl-footer-min-height: 400px;
+$pxl-footer-min-height-md: 200px;
+
+
+// Mixins
+// -------------------------
+
+
+
+// Rules
+// -------------------------
+body {
+  .main-container {
+    //
+    // keep footer at bottom
+    min-height: calc(100vh + #{$pxl-footer-min-height});
+    padding-bottom: $pxl-footer-min-height;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $pxl-footer-min-height-md;
+      min-height: calc(100vh + #{$pxl-footer-min-height-md});
+    }
+
+    //
+    // Drupal backend specific layout
+    .container, .container-fluid {
+      //
+      // Frames of: Page title, Messages, Admin tabs, Action links and Main content
+      .row {
+        div { // column(s)
+
+          h1.page-header {
+            @include pxl-title();
+            border: none;
+          }
+
+          .messages {
+            margin-top: 20px;
+          }
+
+          //
+          // Admin tabs and action links
+          ul.nav-tabs {
+            justify-content: flex-end;
+            margin: 20px 0 5px;
+            li {
+              margin-bottom: -1px;
+              background: none;
+
+              a {
+                padding: 5px 10px;
+                font-family: $font-family-monospace;
+                font-size: 1.2rem;
+                border-radius: 0;
+              }
+
+              &.active, &:hover {
+                border: 1px solid $pxl-color-border;
+                border-bottom: none;
+                background-color: white;
+              }
+            }
+          }
+          ul.action-links {
+            margin: 0;
+            li {
+              float: right;
+              a {
+                font-family: $font-family-monospace;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        } // columns
+
+        //
+        // main content region
+        .region-content {
+          #block-system-main {
+            padding: 0;
+          }
+        }
+      }
+    }
+  } // main-container
+
+  //
+  // Footer at bottom
+  footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: $pxl-footer-min-height;
+    margin-top: (-1 * $pxl-footer-min-height);
+
+    @include media-breakpoint-up(lg) {
+      margin-top: (-1 * $pxl-footer-min-height-md);
+      min-height: $pxl-footer-min-height-md;
+    }
+  }
+}

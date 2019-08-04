@@ -1,0 +1,237 @@
+/*
+ *  CKEditor styles
+ * --------------------------------------------------*/
+/* 
+ * Pixelgarage variable overrides
+ * --------------------------------------------------*/
+/* 
+ * global variables
+ * --------------------------------------------------*/
+/* 
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+@font-face {
+  font-family: "RelayRegular";
+  src: url("~assets/fonts/relay-regular/relay-regular-webfont.eot");
+  src: url("~assets/fonts/relay-regular/relay-regular-webfont.eot") format("embedded-opentype"), url("~assets/fonts/relay-regular/relay-regular-webfont.woff2") format("woff2"), url("~assets/fonts/relay-regular/relay-regular-webfont.woff") format("woff"), url("~assets/fonts/relay-regular/relay-regular-webfont.ttf") format("truetype"), url("~assets/fonts/relay-regular/relay-regular-webfont.svg#relay-regularregular") format("svg");
+}
+@font-face {
+  font-family: "RelayLight";
+  src: url("~assets/fonts/relay-light/relay-light-webfont.eot");
+  src: url("~assets/fonts/relay-light/relay-light-webfont.eot") format("embedded-opentype"), url("~assets/fonts/SohoGothicProRegular/SohoGothicProRegular.woff2") format("woff2"), url("~assets/fonts/relay-light/relay-light-webfont.woff") format("woff"), url("~assets/fonts/relay-light/relay-light-webfont.ttf") format("truetype"), url("~assets/fonts/relay-light/relay-light-webfont.svg#relay-lightregular") format("svg");
+}
+@font-face {
+  font-family: "RelayBold";
+  src: url("~assets/fonts/relay-bold/relay-bold-webfont.eot");
+  src: url("~assets/fonts/relay-bold/relay-bold-webfont.eot") format("embedded-opentype"), url("~assets/fonts/relay-bold/relay-bold-webfont.woff2") format("woff2"), url("~assets/fonts/relay-bold/relay-bold-webfont.woff") format("woff"), url("~assets/fonts/relay-bold/relay-bold-webfont.ttf") format("truetype"), url("~assets/fonts/relay-bold/relay-bold-webfont.svg#relay-boldregular") format("svg");
+}
+/* Text mixins */
+.pxl-title {
+  margin: 20px auto;
+  font-family: "RelayBold";
+  font-size: 24px;
+  letter-spacing: normal;
+  line-height: 1;
+  text-align: left;
+  color: #343a40;
+  color: #343a40;
+}
+@media screen and (min-width: 38.4em) {
+  .pxl-title {
+    font-size: 3.90625vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-title {
+    font-size: 36px;
+  }
+}
+
+.pxl-subtitle {
+  font-family: "RelayBold";
+  font-size: 20px;
+  letter-spacing: normal;
+  line-height: 1.14em;
+  text-align: left;
+  color: #343a40;
+  color: #343a40;
+}
+@media screen and (min-width: 40em) {
+  .pxl-subtitle {
+    font-size: 3.125vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-subtitle {
+    font-size: 24px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-subtitle {
+    font-size: 28px;
+  }
+}
+
+.pxl-leadtext {
+  font-family: "RelayRegular";
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 1.1667em;
+  text-align: left;
+  color: #343a40;
+  color: #343a40;
+}
+@media screen and (min-width: 43.6363636364em) {
+  .pxl-leadtext {
+    font-size: 2.8645833333vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-leadtext {
+    font-size: 22px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-leadtext {
+    font-size: 24px;
+  }
+}
+
+.pxl-text {
+  font-family: "RelayRegular";
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.14em;
+  text-align: left;
+  color: #343a40;
+  color: #343a40;
+}
+@media screen and (min-width: 42.6666666667em) {
+  .pxl-text {
+    font-size: 2.34375vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-text {
+    font-size: 20px;
+  }
+}
+
+.pxl-subtext {
+  font-family: "RelayRegular";
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.1667em;
+  text-align: left;
+  color: #343a40;
+  color: #343a40;
+}
+@media screen and (min-width: 41.1428571429em) {
+  .pxl-subtext {
+    font-size: 1.8229166667vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-subtext {
+    font-size: 14px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-subtext {
+    font-size: 16px;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-subtext {
+    text-align: left;
+  }
+}
+
+.pxl-glow {
+  font-family: "RelayLight";
+  font-size: 100px;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #343a40;
+  -webkit-animation: text-glow 3s ease-in-out infinite alternate;
+  -o-animation: text-glow 3s ease-in-out infinite alternate;
+  animation: text-glow 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #40856D, 0 0 10px #40856D, 0 0 10px #40856D, 0 0 20px #40856D, 0 0 20px #40856D, 0 0 20px #40856D, 0 0 20px #40856D, 0 0 30px #40856D;
+}
+@media screen and (min-width: 48em) {
+  .pxl-glow {
+    font-size: 13.0208333333vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-glow {
+    font-size: 100px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-glow {
+    font-size: 50px;
+  }
+}
+@-webkit-keyframes text-glow {
+  from {
+    text-shadow: 0 0 8px #40856D, 0 0 8px #40856D, 0 0 8px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 18px #40856D, 0 0 22px #40856D;
+  }
+  to {
+    text-shadow: 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 32px #40856D;
+  }
+}
+@-moz-keyframes text-glow {
+  from {
+    text-shadow: 0 0 8px #40856D, 0 0 8px #40856D, 0 0 8px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 18px #40856D, 0 0 22px #40856D;
+  }
+  to {
+    text-shadow: 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 32px #40856D;
+  }
+}
+@keyframes text-glow {
+  from {
+    text-shadow: 0 0 8px #40856D, 0 0 8px #40856D, 0 0 8px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 18px #40856D, 0 0 22px #40856D;
+  }
+  to {
+    text-shadow: 0 0 12px #40856D, 0 0 12px #40856D, 0 0 12px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 24px #40856D, 0 0 32px #40856D;
+  }
+}
+
+.pxl-quote {
+  font-family: "RelayRegular";
+  font-size: 35px;
+  letter-spacing: 0;
+  line-height: 1.1667em;
+  text-align: left;
+  color: #343a40;
+  text-align: center;
+  color: #343a40;
+}
+@media screen and (min-width: 37.3333333333em) {
+  .pxl-quote {
+    font-size: 5.859375vw;
+  }
+}
+@media (min-width: 48em) {
+  .pxl-quote {
+    font-size: 45px;
+  }
+}
+@media (min-width: 75em) {
+  .pxl-quote {
+    font-size: 50px;
+  }
+}

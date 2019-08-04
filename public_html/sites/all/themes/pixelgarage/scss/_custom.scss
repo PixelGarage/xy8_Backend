@@ -1,0 +1,21 @@
+/*
+ * Pixelgarage custom variables, mixins and functions
+ * --------------------------------------------------*/
+//
+// Enhance bootstrap with pxl variables, mixins and functions.
+//
+// Overridden variables (load before bootstrap variables,
+// see https://getbootstrap.com/docs/4.0/getting-started/theming/)
+//
+@import "variables";
+
+//
+// Required bootstrap files such as functions, mixins and global variables
+@import "../../../../../libraries/bootstrap/scss/functions";
+@import "../../../../../libraries/bootstrap/scss/variables";
+@import "../../../../../libraries/bootstrap/scss/mixins";
+
+//
+// PXL mixins, functions and normalisation
+@import "functions";
+@import "mixins";

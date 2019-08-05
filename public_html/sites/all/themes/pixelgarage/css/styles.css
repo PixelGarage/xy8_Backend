@@ -20679,6 +20679,145 @@ input[type=range]::-ms-thumb {
  * Pixelgarage components
  * --------------------------------------------------*/
 /*
+ *  Document component
+ * --------------------------------------------------*/
+/* Html */
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+/* Body */
+body {
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  word-break: break-word;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+  font-family: "PxlFont", "Verdana", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.25em;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+@media (min-width: 36em) {
+  body {
+    font-size: 2.4rem;
+    line-height: 1.25em;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media (min-width: 48em) {
+  body {
+    font-size: 3rem;
+    line-height: 1.15em;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media (min-width: 62em) {
+  body {
+    font-size: 3.2rem;
+    line-height: 1.15em;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media (min-width: 75em) {
+  body {
+    font-size: 3.4rem;
+    line-height: 1.15em;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+body *:focus {
+  outline: none;
+  box-shadow: none;
+}
+body .highlighted .messages {
+  margin-top: 20px;
+}
+body .featured-top .container, body .featured-top .container-fluid {
+  display: flex;
+}
+body .featured-top .container nav.tabs, body .featured-top .container-fluid nav.tabs {
+  width: 100%;
+}
+body .featured-top .container nav.tabs ul.nav-tabs, body .featured-top .container-fluid nav.tabs ul.nav-tabs {
+  margin: 20px 0 5px;
+}
+body .featured-top .container nav.tabs ul.nav-tabs li.nav-item, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item {
+  justify-content: end;
+  margin-bottom: -1px;
+  background: none;
+}
+body .featured-top .container nav.tabs ul.nav-tabs li.nav-item a.nav-link, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item a.nav-link {
+  padding: 5px 10px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+body .featured-top .container nav.tabs ul.nav-tabs li.nav-item a.nav-link.active, body .featured-top .container nav.tabs ul.nav-tabs li.nav-item a.nav-link:hover, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item a.nav-link.active, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item a.nav-link:hover {
+  border: none;
+}
+body .featured-top .container nav.tabs ul.nav-tabs li.nav-item.active, body .featured-top .container nav.tabs ul.nav-tabs li.nav-item:hover, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item.active, body .featured-top .container-fluid nav.tabs ul.nav-tabs li.nav-item:hover {
+  border: 1px solid #c9c9c9;
+  border-bottom: none;
+  background-color: white;
+}
+body .layout-main-wrapper {
+  min-height: calc(100vh + 400px);
+  padding-bottom: 400px;
+}
+@media (min-width: 62em) {
+  body .layout-main-wrapper {
+    padding-bottom: 200px;
+    min-height: calc(100vh + 200px);
+  }
+}
+body .layout-main-wrapper .container .row main.col section .block-system-main-block, body .layout-main-wrapper .container-fluid .row main.col section .block-system-main-block {
+  padding: 0;
+}
+body .layout-main-wrapper .container .row main.col section .block-system-main-block ul.action-links, body .layout-main-wrapper .container-fluid .row main.col section .block-system-main-block ul.action-links {
+  margin: 0;
+}
+body .layout-main-wrapper .container .row main.col section .block-system-main-block ul.action-links li, body .layout-main-wrapper .container-fluid .row main.col section .block-system-main-block ul.action-links li {
+  float: right;
+}
+body .layout-main-wrapper .container .row main.col section .block-system-main-block ul.action-links li a, body .layout-main-wrapper .container-fluid .row main.col section .block-system-main-block ul.action-links li a {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1.2rem;
+}
+body footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 400px;
+  margin-top: -400px;
+}
+@media (min-width: 62em) {
+  body footer {
+    margin-top: -200px;
+    min-height: 200px;
+  }
+}
+
+/*
  *  Header component
  * --------------------------------------------------*/
 header {
@@ -21087,115 +21226,6 @@ header .container .navbar-collapse nav .region-navigation .block-locale, header 
 @media (min-width: 75em) {
   header .container .navbar-collapse nav .region-navigation .block-locale, header .container-fluid .navbar-collapse nav .region-navigation .block-locale {
     display: inline-block;
-  }
-}
-
-/*
- *  Main content component
- * --------------------------------------------------*/
-body .main-container {
-  min-height: calc(100vh + 400px);
-  padding-bottom: 400px;
-}
-@media (min-width: 62em) {
-  body .main-container {
-    padding-bottom: 200px;
-    min-height: calc(100vh + 200px);
-  }
-}
-body .main-container .container .row div h1.page-header, body .main-container .container-fluid .row div h1.page-header {
-  font-family: "PxlFont", "Verdana", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 4rem;
-  line-height: 1.05em;
-  letter-spacing: 0em;
-  text-align: left;
-  margin: 0 0 1.05em;
-  border: none;
-}
-@media (min-width: 36em) {
-  body .main-container .container .row div h1.page-header, body .main-container .container-fluid .row div h1.page-header {
-    font-size: 4.8rem;
-    line-height: 1.05em;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0 0 1.05em;
-  }
-}
-@media (min-width: 48em) {
-  body .main-container .container .row div h1.page-header, body .main-container .container-fluid .row div h1.page-header {
-    font-size: 5.8rem;
-    line-height: 1em;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0 0 1em;
-  }
-}
-@media (min-width: 62em) {
-  body .main-container .container .row div h1.page-header, body .main-container .container-fluid .row div h1.page-header {
-    font-size: 6rem;
-    line-height: 1em;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0 0 1em;
-  }
-}
-@media (min-width: 75em) {
-  body .main-container .container .row div h1.page-header, body .main-container .container-fluid .row div h1.page-header {
-    font-size: 6.6rem;
-    line-height: 1em;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0 0 1em;
-  }
-}
-body .main-container .container .row div .messages, body .main-container .container-fluid .row div .messages {
-  margin-top: 20px;
-}
-body .main-container .container .row div ul.nav-tabs, body .main-container .container-fluid .row div ul.nav-tabs {
-  justify-content: flex-end;
-  margin: 20px 0 5px;
-}
-body .main-container .container .row div ul.nav-tabs li, body .main-container .container-fluid .row div ul.nav-tabs li {
-  margin-bottom: -1px;
-  background: none;
-}
-body .main-container .container .row div ul.nav-tabs li a, body .main-container .container-fluid .row div ul.nav-tabs li a {
-  padding: 5px 10px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 1.2rem;
-  border-radius: 0;
-}
-body .main-container .container .row div ul.nav-tabs li.active, body .main-container .container .row div ul.nav-tabs li:hover, body .main-container .container-fluid .row div ul.nav-tabs li.active, body .main-container .container-fluid .row div ul.nav-tabs li:hover {
-  border: 1px solid #c9c9c9;
-  border-bottom: none;
-  background-color: white;
-}
-body .main-container .container .row div ul.action-links, body .main-container .container-fluid .row div ul.action-links {
-  margin: 0;
-}
-body .main-container .container .row div ul.action-links li, body .main-container .container-fluid .row div ul.action-links li {
-  float: right;
-}
-body .main-container .container .row div ul.action-links li a, body .main-container .container-fluid .row div ul.action-links li a {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 1.2rem;
-}
-body .main-container .container .row .region-content #block-system-main, body .main-container .container-fluid .row .region-content #block-system-main {
-  padding: 0;
-}
-body footer {
-  display: flex;
-  position: relative;
-  align-items: center;
-  min-height: 400px;
-  margin-top: -400px;
-}
-@media (min-width: 62em) {
-  body footer {
-    margin-top: -200px;
-    min-height: 200px;
   }
 }
 

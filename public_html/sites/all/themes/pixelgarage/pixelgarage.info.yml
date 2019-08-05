@@ -22,16 +22,15 @@ regions:
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  featured_bottom_first: 'Featured bottom first'
-  featured_bottom_second: 'Featured bottom second'
-  featured_bottom_third: 'Featured bottom third'
+  featured_bottom: 'Featured bottom'
   footer_first: 'Footer first'
   footer_second: 'Footer second'
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
 regions_hidden:
-  - sidebar_first
+  - top_header_form
+  - header_form
 
 libraries:
   - pixelgarage/global-styling

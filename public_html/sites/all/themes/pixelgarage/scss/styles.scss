@@ -1,4 +1,4 @@
-/*
+/* 
  * Pixelgarage styling
  *
  * Custom Styling can use bootstrap functions, mixins and all utility classes.
@@ -19,14 +19,14 @@
 $bs-path: '../../../../../libraries/bootstrap';
 
 /* import mixins and functions and fonts */
-@import "custom";
+@import "variables";
 @import "fonts";
+
+/* normalize HTML elements (bootstrap) */
+@import '../../../../../libraries/bootstrap/scss/bootstrap-reboot';
 
 /* import bootstrap utility rules */
 @import "../../../../../libraries/bootstrap/scss/utilities";
-
-/* normalize HTML elements (bootstrap) */
-@import '../../../../../libraries/bootstrap/scss/reboot';
 
 /* Specific bootstrap rules */
 @import '../../../../../libraries/bootstrap/scss/alert';
@@ -35,7 +35,11 @@ $bs-path: '../../../../../libraries/bootstrap';
 @import "../../../../../libraries/bootstrap/scss/navbar";
 @import "../../../../../libraries/bootstrap/scss/images";
 @import "../../../../../libraries/bootstrap/scss/modal";
+@import "../../../../../libraries/bootstrap/scss/tables";
 
+/* PXL mixins and functions */
+@import "functions";
+@import "mixins";
 
 /* import specific Pixelgarage rules */
 @import "grid";
@@ -45,39 +49,4 @@ $bs-path: '../../../../../libraries/bootstrap';
 @import "themes";
 
 /* import Drupal specific components */
-@import "components";
-
-//
-//  Pixelgarage CSS rules
-//
-/* Html */
-html {
-  height: 100%;
-  font-size: $global-font-size;
-}
-
-/* Body */
-body {
-  position: relative;
-  min-height: 100%;
-  // font smoothing
-  @include pxl-sharp-fonts;
-
-	//Trennung Manuell mit &shy;
-  @include pxl-hyphenate(manual);
-
-  // text font
-  @include pxl-font-plain-style();
-
-  *:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
-
-//
-// Images
-//
-img {
- @include img-fluid;
-}
+@import "structures";

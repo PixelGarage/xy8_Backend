@@ -12,44 +12,21 @@
 }
 
 //
-// Header, Footer
-//
-header {
-  @include pxl-spacey(pt, s1, default);
-}
-
-footer {
-  @include pxl-spacey(pt, s1, default);
-}
-
-
-//
 // Top-level blocks: Main, Article, ASide, Section
-//
-// Main can contain articles and sections, but not vice-versa
-// Articles and Aside can contain sections but not vice-versa
-// Main, article, section and aside can be structured with a grid (row > col)
 //
 main, article, section, aside {
   position: relative;
-  width: 100%;
 
-  padding-left: 0;
-  padding-right: 0;
   @include pxl-space0(my);
+  padding: 0;
 }
-
-//
-// Drupal: blocks are sections
-section:not(.block) {
-  @include pxl-spacey(py, s1, section);
-}
-
 
 //
 // Detail block
 //
 details {
+  position: relative;
+  margin: 0;
   summary {
 
   }
@@ -59,6 +36,8 @@ details {
 // Dialog block
 //
 dialog {
+  position: relative;
+  margin: 0;
 }
 
 
@@ -75,20 +54,18 @@ dialog {
 //
 // Columns
 //
-.col {
-  @include pxl-spacey(py, s1, column);
+.row > [class*="col-"] {
+  margin: 0;
+  @include pxl-space0(py);
 }
 
 //
-// ONLY Columns and sections can contain text elements, form contains form elements
-// nullify last bottom margin in forms, but not for text
-.col > *:first-child,
-section:not(#block-system-main) > *:first-child,
+// Form elements in form
 form > *:first-child {
-  margin-top: 0;
+  @include pxl-space0(mt);
 }
 form > *:last-child {
-  margin-bottom: 0;
+  @include pxl-space0(mb);
 }
 
 
@@ -98,7 +75,7 @@ form > *:last-child {
 // images and embeds
 h1+img, .pxl-title+img,
 h2+img, .pxl-subtitle+img,
-p+img, .pxl-text+img,
+p+img, .pxl-leadtext+img, .pxl-text+img,
 small+img, .marginal+img, .pxl-subtext+img, .legend+img,
 blockquote+img, .pxl-quote+img {
   @include pxl-spacey(my, s1, section);

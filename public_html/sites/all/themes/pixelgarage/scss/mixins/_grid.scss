@@ -128,8 +128,8 @@
 
 
 //
-// define grid columns
-@mixin pxl-make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths) {
+// define grid column classes
+@mixin pxl-make-grid-column-classes($columns: $grid-columns, $gutters: $grid-gutter-widths) {
   //
   // use only gutter breakpoints
   @each $breakpoint in map-keys($gutters) {

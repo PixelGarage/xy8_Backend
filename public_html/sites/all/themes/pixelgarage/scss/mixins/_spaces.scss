@@ -11,100 +11,118 @@ $space-types: (default: d, column: col, section: s);
 
 $default-yspaces: ( // default vertical spaces
   xs: (
-    mb: map-get($grid-gutter-widths, xs),
     mt: map-get($grid-gutter-widths, xs),
-    pb: map-get($grid-gutter-widths, xs),
+    mb: map-get($grid-gutter-widths, xs),
     pt: map-get($grid-gutter-widths, xs),
+    pb: map-get($grid-gutter-widths, xs),
   ),
   sm: (
-    mb: map-get($grid-gutter-widths, sm),
     mt: map-get($grid-gutter-widths, sm),
-    pb: map-get($grid-gutter-widths, sm),
+    mb: map-get($grid-gutter-widths, sm),
     pt: map-get($grid-gutter-widths, sm),
+    pb: map-get($grid-gutter-widths, sm),
   ),
   md: (
-    mb: map-get($grid-gutter-widths, md),
     mt: map-get($grid-gutter-widths, md),
-    pb: map-get($grid-gutter-widths, md),
+    mb: map-get($grid-gutter-widths, md),
     pt: map-get($grid-gutter-widths, md),
+    pb: map-get($grid-gutter-widths, md),
   ),
   lg: (
-    mb: map-get($grid-gutter-widths, lg),
     mt: map-get($grid-gutter-widths, lg),
-    pb: map-get($grid-gutter-widths, lg),
+    mb: map-get($grid-gutter-widths, lg),
     pt: map-get($grid-gutter-widths, lg),
+    pb: map-get($grid-gutter-widths, lg),
   ),
   xl: (
-    mb: map-get($grid-gutter-widths, xl),
     mt: map-get($grid-gutter-widths, xl),
-    pb: map-get($grid-gutter-widths, xl),
+    mb: map-get($grid-gutter-widths, xl),
     pt: map-get($grid-gutter-widths, xl),
+    pb: map-get($grid-gutter-widths, xl),
+  ),
+  xxl: (
+    mt: map-get($grid-gutter-widths, xxl),
+    mb: map-get($grid-gutter-widths, xxl),
+    pt: map-get($grid-gutter-widths, xxl),
+    pb: map-get($grid-gutter-widths, xxl),
   ),
 );
 
 $col-yspaces: (  // column vertical spaces
   xs: (
-    mb: map-get($grid-gutter-widths, xs) / 2, // 0.5rem,
     mt: map-get($grid-gutter-widths, sm) / 2, // 1rem,
-    pb: map-get($grid-gutter-widths, xs) / 2, // 0.5rem,
+    mb: map-get($grid-gutter-widths, xs) / 2, // 0.5rem,
     pt: map-get($grid-gutter-widths, xs) / 2, // 0.5rem,
+    pb: map-get($grid-gutter-widths, xs) / 2, // 0.5rem,
   ),
   sm: (
-    mb: map-get($grid-gutter-widths, sm) / 2,
     mt: map-get($grid-gutter-widths, sm) / 2,
-    pb: map-get($grid-gutter-widths, sm) / 2,
+    mb: map-get($grid-gutter-widths, sm) / 2,
     pt: map-get($grid-gutter-widths, sm) / 2,
+    pb: map-get($grid-gutter-widths, sm) / 2,
   ),
   md: (
-    mb: map-get($grid-gutter-widths, md) / 2,
     mt: map-get($grid-gutter-widths, sm) / 2,
-    pb: map-get($grid-gutter-widths, md) / 2,
+    mb: map-get($grid-gutter-widths, md) / 2,
     pt: map-get($grid-gutter-widths, md) / 2,
+    pb: map-get($grid-gutter-widths, md) / 2,
   ),
   lg: (
-    mb: map-get($grid-gutter-widths, lg) / 2,
     mt: map-get($grid-gutter-widths, sm) / 2,
-    pb: map-get($grid-gutter-widths, lg) / 2,
+    mb: map-get($grid-gutter-widths, lg) / 2,
     pt: map-get($grid-gutter-widths, lg) / 2,
+    pb: map-get($grid-gutter-widths, lg) / 2,
   ),
   xl: (
-    mb: map-get($grid-gutter-widths, xl) / 2,
     mt: map-get($grid-gutter-widths, sm) / 2,
-    pb: map-get($grid-gutter-widths, xl) / 2,
+    mb: map-get($grid-gutter-widths, xl) / 2,
     pt: map-get($grid-gutter-widths, xl) / 2,
+    pb: map-get($grid-gutter-widths, xl) / 2,
+  ),
+  xxl: (
+    mt: map-get($grid-gutter-widths, sm) / 2,
+    mb: map-get($grid-gutter-widths, xxl) / 2,
+    pt: map-get($grid-gutter-widths, xxl) / 2,
+    pb: map-get($grid-gutter-widths, xxl) / 2,
   ),
 );
 
 $s-yspaces: ( // section vertical spaces
   xs: (
-    mb: map-get($grid-gutter-widths, xs) * 4.5, // 0.5 from column space
     mt: map-get($grid-gutter-widths, xs) * 4.5,
-    pb: map-get($grid-gutter-widths, xs) * 4.5,
+    mb: map-get($grid-gutter-widths, xs) * 4.5, // 0.5 from column space
     pt: map-get($grid-gutter-widths, xs) * 4.5,
+    pb: map-get($grid-gutter-widths, xs) * 4.5,
   ),
   sm: (
-    mb: map-get($grid-gutter-widths, sm) * 2.5,
     mt: map-get($grid-gutter-widths, sm) * 2.5,
-    pb: map-get($grid-gutter-widths, sm) * 2.5,
+    mb: map-get($grid-gutter-widths, sm) * 2.5,
     pt: map-get($grid-gutter-widths, sm) * 2.5,
+    pb: map-get($grid-gutter-widths, sm) * 2.5,
   ),
   md: (
-    mb: map-get($grid-gutter-widths, md) * 2.5,
     mt: map-get($grid-gutter-widths, md) * 2.5,
-    pb: map-get($grid-gutter-widths, md) * 2.5,
+    mb: map-get($grid-gutter-widths, md) * 2.5,
     pt: map-get($grid-gutter-widths, md) * 2.5,
+    pb: map-get($grid-gutter-widths, md) * 2.5,
   ),
   lg: (
-    mb: map-get($grid-gutter-widths, lg) * 2.5,
     mt: map-get($grid-gutter-widths, lg) * 2.5,
-    pb: map-get($grid-gutter-widths, lg) * 2.5,
+    mb: map-get($grid-gutter-widths, lg) * 2.5,
     pt: map-get($grid-gutter-widths, lg) * 2.5,
+    pb: map-get($grid-gutter-widths, lg) * 2.5,
   ),
   xl: (
-    mb: map-get($grid-gutter-widths, xl) * 2.5,
     mt: map-get($grid-gutter-widths, xl) * 2.5,
-    pb: map-get($grid-gutter-widths, xl) * 2.5,
+    mb: map-get($grid-gutter-widths, xl) * 2.5,
     pt: map-get($grid-gutter-widths, xl) * 2.5,
+    pb: map-get($grid-gutter-widths, xl) * 2.5,
+  ),
+  xxl: (
+    mt: map-get($grid-gutter-widths, xxl) * 2.5,
+    mb: map-get($grid-gutter-widths, xxl) * 2.5,
+    pt: map-get($grid-gutter-widths, xxl) * 2.5,
+    pb: map-get($grid-gutter-widths, xxl) * 2.5,
   ),
 );
 
@@ -112,8 +130,8 @@ $s-yspaces: ( // section vertical spaces
 //
 // FUNCTIONS
 //
-// Get the type spaces for a given breakpoint
-@function pxl-get-type-spaces($type, $breakpoint) {
+// Get the typed spaces for a given breakpoint
+@function pxl-get-typed-spaces($type, $breakpoint) {
   @if ($type == default) {
     @return map-get($default-yspaces, $breakpoint);
   }
@@ -154,27 +172,27 @@ $s-yspaces: ( // section vertical spaces
     margin: 0 !important;
   }
   @else if($side == mb) {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
   @else if($side == mt) {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
   @else if($side == mbt or $side == my) {
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   @else if($side == p) { // paddings
-    margin: 0 !important;
+    margin: 0;
   }
   @else if($side == pb) {
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
   }
   @else if($side == pt) {
-    padding-top: 0 !important;
+    padding-top: 0;
   }
   @else if($side == pbt or $side == py) {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 
@@ -313,7 +331,7 @@ $s-yspaces: ( // section vertical spaces
   $factor: map-get($space-factors, $space);
 
   @each $breakpoint, $gutter in $gutters {
-    $spaces: pxl-get-type-spaces($type, $breakpoint);
+    $spaces: pxl-get-typed-spaces($type, $breakpoint);
     $mb: map-get($spaces, mb);
     $mt: map-get($spaces, mt);
     $pb: map-get($spaces, pb);

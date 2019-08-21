@@ -20,7 +20,7 @@ $typo-styles: (
       size: 4rem,     // font size
       lh:   1.05em,   // line-height
       ls:   0em,      // letter-spacing
-      align:left     // align
+      align:left      // align
     ),
     sm: (
       size:	4.8rem,
@@ -218,13 +218,13 @@ $typo-styles: (
 
 // Variables for font mixin
 // -------------------------
-$weight:				normal;
-$style:         normal;
-$weight-bold:		bold;
 $fontsize:			map-get(map-get(map-get($typo-styles, text), md), size);
 $line-height:		map-get(map-get(map-get($typo-styles, text), md), lh);
 $letter-space:	map-get(map-get(map-get($typo-styles, text), md), ls);
 $align:         map-get(map-get(map-get($typo-styles, text), md), align);
+$style:         normal;
+$weight:				normal;
+$weight-bold:		bold;
 
 
 
@@ -234,7 +234,7 @@ $align:         map-get(map-get(map-get($typo-styles, text), md), align);
 //
 // font definition
 @mixin font-def($size: $fontsize, $lh: $line-height, $ls: $letter-space, $al: $align, $mt: $lh, $mb: $lh) {
-  font-size: $size;
+  font-size: max($size, $min-font-size);
   line-height: $lh;
   letter-spacing: $ls;
   text-align: $al;
@@ -245,30 +245,32 @@ $align:         map-get(map-get(map-get($typo-styles, text), md), align);
 
 //
 // set breakpoint aware font size for given text style.
-@mixin pxl-font-size($text-style: text) {
+@mixin pxl-font-size($text-style: text, $teaser: false) {
+  $factor: if($teaser, $teaser-factor, 1);
   $style: map-get($typo-styles, $text-style);
 
   @each $breakpoint, $typo in $style {
     @include media-breakpoint-up($breakpoint) {
-      font-size: map-get($typo, size);
+      font-size: map-get($typo, size)*$factor;
     }
   }
 }
 
 //
-// set font style with y-margins
-@mixin pxl-font-style($text-style: text){
+// set font style with 0 top-margins
+@mixin pxl-font-style($text-style: text, $teaser: false){
   font-family: $pxl-font;
   font-weight: $weight;
   font-style: $style;
   $style: map-get($typo-styles, $text-style);
+  $factor: if($teaser, $teaser-factor, 1);
 
   @each $breakpoint, $typo in $style {
     @include media-breakpoint-up($breakpoint) {
       @include font-def(
-          map-get($typo, size),
+          map-get($typo, size)*$factor,
           map-get($typo, lh),
-          map-get($typo, ls),
+          map-get($typo, ls)*$factor,
           map-get($typo, align), 0
       );
     }
@@ -278,18 +280,19 @@ $align:         map-get(map-get(map-get($typo-styles, text), md), align);
 
 //
 // set font style with 0-margin
-@mixin pxl-font-plain-style ($text-style: text) {
+@mixin pxl-font-plain-style ($text-style: text, $teaser: false) {
   font-family: $pxl-font;
   font-weight: $weight;
   font-style: $style;
   $style: map-get($typo-styles, $text-style);
+  $factor: if($teaser, $teaser-factor, 1);
 
   @each $breakpoint, $typo in $style {
     @include media-breakpoint-up($breakpoint) {
       @include font-def(
-          map-get($typo, size),
+          map-get($typo, size)*$factor,
           map-get($typo, lh),
-          map-get($typo, ls),
+          map-get($typo, ls)*$factor,
           map-get($typo, align), 0, 0
       );
     }

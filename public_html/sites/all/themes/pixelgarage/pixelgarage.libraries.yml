@@ -2,10 +2,10 @@ global-styling:
   version: VERSION
   js:
     js/global.js: {}
+    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
   css:
     component:
       css/styles.css: {}
-      css/colors.css: {}
 bootstrap:
   js:
     /libraries/bootstrap/dist/js/bootstrap.min.js: {}

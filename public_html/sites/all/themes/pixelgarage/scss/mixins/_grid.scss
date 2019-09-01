@@ -23,6 +23,11 @@
         margin-left: -$xgutter;
         padding-right: $xgutter;
         padding-left: $xgutter;
+
+        &.row {
+          padding-right: $xgutter*3/4;
+          padding-left: $xgutter*3/4;
+        }
       }
     }
   }
@@ -42,6 +47,11 @@
     & .full-width {
       $m-space: calc((#{$max-width} - 100vw) / 2 - #{$max-gutter});
       $p-space: calc((100vw - #{$max-width}) / 2 + #{$max-gutter});
+
+      &.row {
+        // if .row and .full-width are set on the same element, correct negative row margin by padding
+        $p-space: calc((100vw - #{$max-width}) / 2 + #{$max-gutter}*3/4);
+      }
 
       width: 100vw;
       margin-right: $m-space;
@@ -67,6 +77,11 @@
       & .full-width {
         $m-space: calc((#{$max-width} - 100vw) / 2 - #{$max-gutter});
         $p-space: calc((100vw - #{$max-width}) / 2 + #{$max-gutter});
+
+        &.row {
+          // if .row and .full-width are set on the same element, correct negative row margin by padding
+          $p-space: calc((100vw - #{$max-width}) / 2 + #{$max-gutter}*3/4);
+        }
 
         width: 100vw;
         margin-right: $m-space;

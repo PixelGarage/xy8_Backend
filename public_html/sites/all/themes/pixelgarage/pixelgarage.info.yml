@@ -28,5 +28,8 @@ regions_hidden:
 libraries:
   - pixelgarage/global-styling
 
+libraries-override:
+  bootstrap_barrio/global-styling: false
+
 ckeditor_stylesheets:
   - css/ckeditor.css

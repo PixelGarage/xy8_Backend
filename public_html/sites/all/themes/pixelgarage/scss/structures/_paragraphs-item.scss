@@ -20,13 +20,8 @@
     @include theme-lightgray-black;
   }
 
-  // paragraph structure
-  &.paragraphs-item-text-image {
-    @include paragraph-50-50;
-  }
-  &.paragraphs-item-image33-text66 {
-    @include paragraph-33-66;
-  }
+  // paragraph switch columns
+  @include paragraph-switch;
 
   // paragraph columns
   &.row {

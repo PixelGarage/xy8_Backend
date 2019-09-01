@@ -29,12 +29,13 @@
     "drupal/backup_migrate": "^4.0",
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/bootstrap_layouts": "^5.1",
-    "drupal/console": "^1.0.2",
+    "drupal/console": "^1.9",
     "drupal/consumer_image_styles": "^3.0@RC",
     "drupal/consumers": "^1.9",
     "drupal/core": "^8.7.0",
     "drupal/decoupled_router": "^1.7",
     "drupal/ds": "^3.3",
+    "drupal/editor_advanced_link": "^1.4",
     "drupal/entity_browser": "^2.1",
     "drupal/image_widget_crop": "^2.2",
     "drupal/inline_entity_form": "^1.0@RC",
@@ -61,6 +62,7 @@
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
+    "drupal/twig_xdebug": "^1.1",
     "webflo/drupal-core-require-dev": "^8.7.0"
   },
   "conflict": {

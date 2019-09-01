@@ -27,7 +27,7 @@ function pixelgarage_preprocess_page(&$vars) {
 
   // replace logo with .svg and make it language dependant
   $language = \Drupal::languageManager()->getCurrentLanguage();
-  $path = drupal_get_path('module', 'pixelgarage');
+  $path = drupal_get_path('theme', 'pixelgarage');
   $logo = $path . '/images/logo.svg';
   $vars['logo'] = $logo ? file_create_url($logo) : '';
 
@@ -50,8 +50,32 @@ function pixelgarage_preprocess_page(&$vars) {
 
 
 /**
+ * PARAGRAPH variables: switch, full-width and anchor
  * Override or insert variables for the paragraph templates.
  */
-function pixelgarage_preprocess_paragraph(&$vars) {
-  $test = $vars;
+function pixelgarage_preprocess_bs_1col(&$vars) {
+  _paragraph_additional_variables($vars);
 }
+
+function pixelgarage_preprocess_bs_2col(&$vars) {
+  _paragraph_additional_variables($vars);
+}
+
+function _paragraph_additional_variables(&$vars) {
+  $content = $vars['content'];
+  if ($content['#entity_type'] == 'paragraph') {
+    // type hint for PHPStorm code completion
+    // @var $paragraph \Drupal\Core\Entity\ContentEntityBase
+    $paragraph = $content['#paragraph'];
+    if ($paragraph->hasField('field_switch')) {
+      $vars['switch'] = $paragraph->get('field_switch')->value == '1';
+    }
+    if ($paragraph->hasField('field_full_width')) {
+      $vars['full_width'] = $paragraph->get('field_full_width')->value == '1';
+    }
+    if ($paragraph->hasField('field_anchor')) {
+      $vars['anchor'] = $paragraph->get('field_anchor')->value;
+    }
+  }
+}
+

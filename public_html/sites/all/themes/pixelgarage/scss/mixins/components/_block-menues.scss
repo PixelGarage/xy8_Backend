@@ -4,6 +4,8 @@
 
 // Variables
 // -------------------------
+$menu-dist-horizontal: 30px;
+$menu-dist-vertical: 20px;
 
 
 // Mixins
@@ -16,7 +18,7 @@
 
       li {
         margin-left: 0;
-        margin-bottom: 20px;
+        margin-bottom: $menu-dist-vertical;
 
         a {
           padding: 0;
@@ -32,7 +34,7 @@
         justify-content: flex-end;
 
         li {
-          margin-left: 30px;
+          margin-left: $menu-dist-horizontal;
           margin-bottom: 0;
 
           &.first {
@@ -66,7 +68,7 @@
       li {
         @include pxl-no-list-style;
         margin-left: 0;
-        margin-bottom: 20px;
+        margin-bottom: $menu-dist-vertical;
 
         a {
           padding: 0;
@@ -91,7 +93,7 @@
         justify-content: flex-end;
 
         li {
-          margin-left: 30px;
+          margin-left: $menu-dist-horizontal;
           margin-bottom: 0;
 
           &.first {
@@ -122,32 +124,21 @@
     flex-grow: 1;
 
     ul.nav {
-      margin-top: 0;
+      margin-top: 10px;
+      justify-content: flex-end;
       align-items: flex-end;
 
       a {
         padding: 0;
-        @include pxl-text();
-        font-weight: bold;
+        @include pxl-font-plain-style(legend);
+        margin-left: $menu-dist-horizontal;
+        margin-bottom: 0 !important;
+        font-weight: normal;
+        text-align: left;
         @include pxl-link-underline-off;
-      }
-    }
 
-    @include media-breakpoint-up($expand-breakpoint) {
-      ul.nav {
-        justify-content: flex-end;
-
-        a {
-          padding: 0;
-          @include pxl-font-plain-style(legend);
-          margin-left: 30px;
-          margin-bottom: 0 !important;
-          font-weight: normal;
-          text-align: left;
-
-          &.first {
-            margin-left: 0;
-          }
+        &:first-child {
+          margin-left: 0;
         }
       }
     }

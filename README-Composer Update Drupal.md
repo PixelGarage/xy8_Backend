@@ -1,7 +1,7 @@
 ## MODULE UPDATES
 
     // Update Drupal Core and modules
-    composer update (--no-dev)
+    composer update (--no-dev) --with-dependencies
     
     // update db and reset cache
     drush updatedb

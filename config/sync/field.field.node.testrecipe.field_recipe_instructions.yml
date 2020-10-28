@@ -1,0 +1,21 @@
+uuid: 0e1dec59-fefd-4d62-9db3-22d2d208dadc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_instructions
+    - node.type.testrecipe
+  module:
+    - text
+id: node.testrecipe.field_recipe_instructions
+field_name: field_recipe_instructions
+entity_type: node
+bundle: testrecipe
+label: 'Recipe instructions'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

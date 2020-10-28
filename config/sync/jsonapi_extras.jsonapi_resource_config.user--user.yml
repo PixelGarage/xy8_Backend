@@ -1,0 +1,125 @@
+uuid: 39e664fa-0b61-4c9a-bcd9-c1484bbea2ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user--user
+disabled: false
+path: users
+resourceType: users
+resourceFields:
+  uid:
+    fieldName: uid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  preferred_langcode:
+    disabled: true
+    fieldName: preferred_langcode
+    publicName: preferred_langcode
+    enhancer:
+      id: ''
+  preferred_admin_langcode:
+    disabled: true
+    fieldName: preferred_admin_langcode
+    publicName: preferred_admin_langcode
+    enhancer:
+      id: ''
+  name:
+    fieldName: name
+    publicName: name
+    enhancer:
+      id: ''
+    disabled: false
+  pass:
+    fieldName: pass
+    publicName: pass
+    enhancer:
+      id: ''
+    disabled: false
+  mail:
+    fieldName: mail
+    publicName: mail
+    enhancer:
+      id: ''
+    disabled: false
+  timezone:
+    fieldName: timezone
+    publicName: timezone
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changedAt
+    enhancer:
+      id: ''
+    disabled: false
+  access:
+    disabled: true
+    fieldName: access
+    publicName: access
+    enhancer:
+      id: ''
+  login:
+    disabled: true
+    fieldName: login
+    publicName: login
+    enhancer:
+      id: ''
+  init:
+    disabled: true
+    fieldName: init
+    publicName: init
+    enhancer:
+      id: ''
+  roles:
+    fieldName: roles
+    publicName: roles
+    enhancer:
+      id: ''
+    disabled: false
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  path:
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: ''
+    disabled: false
+  user_picture:
+    fieldName: user_picture
+    publicName: user_picture
+    enhancer:
+      id: ''
+    disabled: false

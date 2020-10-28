@@ -1,0 +1,57 @@
+uuid: dd3ca7e5-4f58-416e-89e6-6e28341fea14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testrecipe.body
+    - field.field.node.testrecipe.field_image
+    - field.field.node.testrecipe.field_recipe_instructions
+    - field.field.node.testrecipe.field_tags
+    - node.type.testrecipe
+  module:
+    - image
+    - text
+    - user
+id: node.testrecipe.default
+targetEntityType: node
+bundle: testrecipe
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_recipe_instructions:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tags:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

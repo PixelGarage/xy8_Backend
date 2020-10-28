@@ -1,0 +1,22 @@
+uuid: 8da08565-1418-4f31-bc3c-0618b39fd1e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pixelgarage
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: pixelgarage_content
+theme: pixelgarage
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

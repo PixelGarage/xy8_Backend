@@ -1,0 +1,22 @@
+uuid: 5ad4030e-7aa2-4945-9108-a50a40a81899
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testrecipe
+id: node.testrecipe.promote
+field_name: promote
+entity_type: node
+bundle: testrecipe
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

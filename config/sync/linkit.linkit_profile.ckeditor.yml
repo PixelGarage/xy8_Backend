@@ -1,0 +1,47 @@
+uuid: 06c3964a-fb37-40a3-a972-0c196d1536b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+    - user
+id: ckeditor
+label: CKEditor
+description: ''
+attributes: {  }
+matchers:
+  9939a445-4186-4c45-b85b-35f6fe773635:
+    uuid: 9939a445-4186-4c45-b85b-35f6fe773635
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  2ab4daec-f850-45dc-a685-7077962deb2d:
+    uuid: 2ab4daec-f850-45dc-a685-7077962deb2d
+    id: 'entity:user'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: null
+      group_by_bundle: null
+      roles: {  }
+      include_blocked: false
+  635e97a1-c07d-422e-a078-835790269f82:
+    uuid: 635e97a1-c07d-422e-a078-835790269f82
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: true
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail

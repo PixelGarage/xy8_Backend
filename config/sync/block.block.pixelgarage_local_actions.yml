@@ -1,0 +1,20 @@
+uuid: e8ab6057-52fa-4923-980f-ba7e12a6587e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pixelgarage
+_core:
+  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
+id: pixelgarage_local_actions
+theme: pixelgarage
+region: admin
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

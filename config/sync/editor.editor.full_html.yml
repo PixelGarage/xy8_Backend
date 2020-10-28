@@ -1,0 +1,78 @@
+uuid: 2eda6ead-1bab-4c8e-bdcd-a2da986a53c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+            - Maximize
+        -
+          name: 'Block Formatting'
+          items:
+            - Styles
+        -
+          name: Formatting
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - '-'
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+      -
+        -
+          name: Linking
+          items:
+            - Linkit
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+            - '-'
+            - Indent
+            - Outdent
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - Table
+            - HorizontalRule
+  plugins:
+    stylescombo:
+      styles: "h2.pxl-title|Title\r\nh3.pxl-subtitle|Subtitle\r\nh2.pxl-title.headline|Title Headline\r\nh3.pxl-subtitle.headline|Subtitle Headline\r\np.pxl-leadtext|Leadtext\r\np.pxl-text|Normal\r\ndiv.pxl-text|Normal(div)\r\np.pxl-text.headline|Normal Headline\r\np.pxl-subtext|Subtext\r\np.pxl-legend|Legend\r\ndiv.pxl-quote|Quote"
+    language:
+      language_list: un
+    linkit:
+      linkit_profile: ckeditor
+image_upload:
+  status: true
+  scheme: public
+  directory: images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

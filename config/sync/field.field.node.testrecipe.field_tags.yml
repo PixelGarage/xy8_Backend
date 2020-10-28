@@ -1,0 +1,29 @@
+uuid: df818481-7377-4690-a90d-b382ffc9d9d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.testrecipe
+    - taxonomy.vocabulary.tags
+id: node.testrecipe.field_tags
+field_name: field_tags
+entity_type: node
+bundle: testrecipe
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

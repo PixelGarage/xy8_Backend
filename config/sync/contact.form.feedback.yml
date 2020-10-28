@@ -1,0 +1,14 @@
+uuid: 2a52ffac-4a7b-4aef-8351-63cd3663e214
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - admin@ramosoft.ch
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

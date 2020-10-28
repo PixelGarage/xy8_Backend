@@ -1,0 +1,19 @@
+uuid: 476b6044-3e52-4924-a60e-62ea19b10ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_anchor
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_anchor
+field_name: field_anchor
+entity_type: paragraph
+bundle: image
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

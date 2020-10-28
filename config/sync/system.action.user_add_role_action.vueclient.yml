@@ -1,0 +1,14 @@
+uuid: 7b724657-f664-41c4-b979-9882236f687c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vueclient
+  module:
+    - user
+id: user_add_role_action.vueclient
+label: 'Add the VueClient role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: vueclient

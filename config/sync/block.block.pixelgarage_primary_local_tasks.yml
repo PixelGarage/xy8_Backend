@@ -1,0 +1,22 @@
+uuid: 8edd5840-f0d3-4f39-87d3-a0070f27ce94
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pixelgarage
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: pixelgarage_primary_local_tasks
+theme: pixelgarage
+region: admin
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: fadbaa1b-d574-4766-8981-10443e4eb20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_switch
+    - paragraphs.paragraphs_type.image_text
+id: paragraph.image_text.field_switch
+field_name: field_switch
+entity_type: paragraph
+bundle: image_text
+label: Switch
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

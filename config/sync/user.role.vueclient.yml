@@ -1,0 +1,11 @@
+uuid: e9953c12-4648-44b8-9047-91bc8d52979c
+langcode: en
+status: true
+dependencies: {  }
+id: vueclient
+label: VueClient
+weight: 3
+is_admin: null
+permissions:
+  - 'issue subrequests'
+  - 'restful post user_registration'

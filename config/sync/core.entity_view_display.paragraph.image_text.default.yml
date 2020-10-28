@@ -1,0 +1,106 @@
+uuid: 4f7e060b-d9dd-4bca-8c9b-3c1e9376ee37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text.field_anchor
+    - field.field.paragraph.image_text.field_full_width
+    - field.field.paragraph.image_text.field_image
+    - field.field.paragraph.image_text.field_switch
+    - field.field.paragraph.image_text.field_text
+    - paragraphs.paragraphs_type.image_text
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-lg-6: col-lg-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-lg-6: col-lg-6
+            add_region_classes: 1
+            attributes: ''
+          ds_hidden:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_image
+      right:
+        - field_text
+      ds_hidden:
+        - field_switch
+        - field_full_width
+        - field_anchor
+id: paragraph.image_text.default
+targetEntityType: paragraph
+bundle: image_text
+mode: default
+content:
+  field_anchor:
+    type: string
+    weight: 4
+    region: ds_hidden
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_full_width:
+    type: boolean
+    weight: 3
+    region: ds_hidden
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_switch:
+    type: boolean
+    weight: 2
+    region: ds_hidden
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+hidden: {  }

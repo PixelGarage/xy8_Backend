@@ -1,0 +1,77 @@
+uuid: 40690da9-2476-4ada-8cbd-571c644ee18e
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file--file
+disabled: false
+path: files
+resourceType: files
+resourceFields:
+  fid:
+    fieldName: fid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: owner
+    enhancer:
+      id: ''
+    disabled: false
+  filename:
+    fieldName: filename
+    publicName: filename
+    enhancer:
+      id: ''
+    disabled: false
+  uri:
+    fieldName: uri
+    publicName: uri
+    enhancer:
+      id: ''
+    disabled: false
+  filemime:
+    fieldName: filemime
+    publicName: mime
+    enhancer:
+      id: ''
+    disabled: false
+  filesize:
+    fieldName: filesize
+    publicName: size
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changedAt
+    enhancer:
+      id: ''
+    disabled: false

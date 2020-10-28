@@ -21,11 +21,10 @@
   ],
   "require": {
     "php": ">=5.6",
-    "composer/installers": "^1.2",
+    "composer/installers": "^1.7",
     "cweagans/composer-patches": "^1.6.5",
     "deployer/deployer": "^6.4",
-    "drupal-composer/drupal-scaffold": "^2.5",
-    "drupal/admin_toolbar": "^1.27",
+    "drupal/admin_toolbar": "^2.4",
     "drupal/backup_migrate": "^4.0",
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/bootstrap_layouts": "^5.1",
@@ -33,7 +32,8 @@
     "drupal/console": "^1.9",
     "drupal/consumer_image_styles": "^3.0@RC",
     "drupal/consumers": "^1.9",
-    "drupal/core": "^8.7.0",
+    "drupal/core-composer-scaffold": "^8.8",
+    "drupal/core-recommended": "^8.8",
     "drupal/decoupled_router": "^2.0",
     "drupal/ds": "^3.3",
     "drupal/editor_advanced_link": "^1.4",
@@ -50,7 +50,7 @@
     "drupal/paragraphs": "^1.8",
     "drupal/pathauto": "^1.4",
     "drupal/restui": "^1.17",
-    "drupal/simple_oauth": "^3.16",
+    "drupal/simple_oauth": "^5.0",
     "drupal/subrequests": "^3.0",
     "drupal/video_embed_field": "^2.1",
     "drush/drush": "^10.0",
@@ -63,8 +63,7 @@
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
-    "drupal/twig_xdebug": "^1.1",
-    "webflo/drupal-core-require-dev": "^8.7.0"
+    "drupal/twig_xdebug": "^1.1"
   },
   "conflict": {
     "drupal/drupal": "*"

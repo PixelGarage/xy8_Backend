@@ -1,0 +1,51 @@
+uuid: f27ce830-cc3c-4991-8b9f-5fa04ee072e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_anchor
+    - field.field.paragraph.text.field_full_width
+    - field.field.paragraph.text.field_text
+    - paragraphs.paragraphs_type.text
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+hidden:
+  field_anchor: true
+  field_full_width: true

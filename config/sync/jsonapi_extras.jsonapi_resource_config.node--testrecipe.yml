@@ -1,0 +1,161 @@
+uuid: dfee31a5-50a9-4556-bab1-644e2fe141eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testrecipe
+id: node--testrecipe
+disabled: false
+path: recipes
+resourceType: recipes
+resourceFields:
+  nid:
+    fieldName: nid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  vid:
+    disabled: true
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  type:
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+    disabled: false
+  revision_timestamp:
+    disabled: true
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+  revision_uid:
+    disabled: true
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+  revision_log:
+    disabled: true
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: owner
+    enhancer:
+      id: ''
+    disabled: false
+  title:
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changedAt
+    enhancer:
+      id: ''
+    disabled: false
+  promote:
+    disabled: true
+    fieldName: promote
+    publicName: promote
+    enhancer:
+      id: ''
+  sticky:
+    disabled: true
+    fieldName: sticky
+    publicName: sticky
+    enhancer:
+      id: ''
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  revision_default:
+    disabled: true
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+  revision_translation_affected:
+    disabled: true
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+  path:
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: ''
+    disabled: false
+  menu_link:
+    disabled: true
+    fieldName: menu_link
+    publicName: menu_link
+    enhancer:
+      id: ''
+  body:
+    fieldName: body
+    publicName: summary
+    enhancer:
+      id: ''
+    disabled: false
+  field_cooking_time:
+    fieldName: field_cooking_time
+    publicName: cooking_time
+    enhancer:
+      id: ''
+    disabled: false
+  field_image:
+    fieldName: field_image
+    publicName: image
+    enhancer:
+      id: ''
+    disabled: false
+  field_recipe_instructions:
+    fieldName: field_recipe_instructions
+    publicName: recipe_instructions
+    enhancer:
+      id: ''
+    disabled: false
+  field_tags:
+    fieldName: field_tags
+    publicName: tags
+    enhancer:
+      id: ''
+    disabled: false

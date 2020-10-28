@@ -1,0 +1,39 @@
+uuid: f3c5fce6-7f8a-436c-a044-1abd15223449
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testrecipe.body
+    - node.type.testrecipe
+  module:
+    - text
+    - user
+id: node.testrecipe.teaser
+targetEntityType: node
+bundle: testrecipe
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

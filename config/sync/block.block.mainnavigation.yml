@@ -1,0 +1,25 @@
+uuid: 431a0530-37ac-4e65-b087-3ac38ae51f58
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - pixelgarage
+id: mainnavigation
+theme: pixelgarage
+region: primary_menu
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

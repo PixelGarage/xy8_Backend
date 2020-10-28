@@ -1,0 +1,20 @@
+uuid: 979bf152-eb4c-444f-82f5-e37179b92dad
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pixelgarage
+id: messages
+theme: pixelgarage
+region: message
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

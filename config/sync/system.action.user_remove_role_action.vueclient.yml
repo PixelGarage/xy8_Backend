@@ -1,0 +1,14 @@
+uuid: 7aa05b8d-94bb-4516-bf16-0376a585ecfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vueclient
+  module:
+    - user
+id: user_remove_role_action.vueclient
+label: 'Remove the VueClient role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: vueclient

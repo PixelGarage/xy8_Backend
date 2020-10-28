@@ -1,0 +1,23 @@
+uuid: 306e5c3e-b155-4fc6-90eb-d6fb54647952
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.testrecipe
+  module:
+    - text
+id: node.testrecipe.body
+field_name: body
+entity_type: node
+bundle: testrecipe
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
